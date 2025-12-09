@@ -9,3 +9,6 @@
 - [x] Copy html template index.html to App.jsx (convert to jsx)
 - [x] Setup react router
 - [x] Extract home page components
+- [x] Add BrowserRouter Component
+- [x] Add routes
+- [] Dynamic Navigation
