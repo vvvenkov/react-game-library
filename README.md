@@ -6,4 +6,5 @@
 - [x] Create react base project inside client folder `npm create vite .`
 - [x] Add resources
 - [x] Add react-router `npm i react-router`
-- [] Setup react router
+- [x] Copy html template index.html to App.jsx (convert to jsx)
+- [x] Setup react router
