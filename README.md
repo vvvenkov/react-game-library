@@ -8,4 +8,4 @@
 - [x] Add react-router `npm i react-router`
 - [x] Copy html template index.html to App.jsx (convert to jsx)
 - [x] Setup react router
-- [ ] Extract homep page components
+- [x] Extract home page components
