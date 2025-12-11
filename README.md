@@ -13,3 +13,4 @@
 - [x] Add routes
 - [x] Dynamic Navigation
 - [x] Dynamic Catalog
+- [x] Dynamic Home latest games

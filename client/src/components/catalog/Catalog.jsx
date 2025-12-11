@@ -22,13 +22,14 @@ export default function Catalog() {
     return (
         <section id="catalog-page">
             <h1>Catalog</h1>
-            {/* <!-- Display div: with information about every game (if any) --> */}
+            {games.length > 0
+                ? (
+                    <div className="catalog-container">
+                        {games.map(game => <Game key={game._Id} {...game} />)}
+                    </div>
+                )
+                : <h3 className="no-articles">No Added Games Yet</h3>
+            }
 
-            <div className="catalog-container">
-                {games.map(game => <Game key={game._Id} {...game} />)}
-
-            </div>
-            {/* <!-- Display paragraph: If there is no games  --> */}
-            {/* <!-- <h3 className="no-articles">No Added Games Yet</h3> --> */}
         </section>)
 }
