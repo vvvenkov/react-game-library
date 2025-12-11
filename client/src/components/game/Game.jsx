@@ -5,6 +5,7 @@ export default function Game({
     title,
     genre,
     imageUrl,
+
 }) {
     return (
         <div className="game">

@@ -25,7 +25,7 @@ export default function Catalog() {
             {games.length > 0
                 ? (
                     <div className="catalog-container">
-                        {games.map(game => <Game key={game._Id} {...game} />)}
+                        {games.map(game => <Game key={game._id} {...game} />)}
                     </div>
                 )
                 : <h3 className="no-articles">No Added Games Yet</h3>

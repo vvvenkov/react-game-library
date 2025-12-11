@@ -30,12 +30,11 @@ export default function Home() {
             <div id="latest-wrap">
                 {/* <!-- Display div: with information about every game (if any) --> */}
                 <div className="home-container">
-                    
+
                     {/* short hand condictional rendering */}
                     {latestGames.length === 0 && <p className="no-articles">No games yet...</p>}
 
                     {latestGames.map(game => <Game key={game._id} {...game} />)}
-
                 </div>
 
             </div>
