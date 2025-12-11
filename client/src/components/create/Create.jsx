@@ -11,7 +11,7 @@ export default function Create() {
         const data = Object.fromEntries(formData);
 
         data.players = Number(data.players);
-        data.createdOn = Date.now();
+        data._createdOn = Date.now();
 
         const response = await fetch('http://localhost:3030/jsonstore/games', {
             method: 'POST',
