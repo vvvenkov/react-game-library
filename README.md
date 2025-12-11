@@ -11,4 +11,5 @@
 - [x] Extract home page components
 - [x] Add BrowserRouter Component
 - [x] Add routes
-- [] Dynamic Navigation
+- [x] Dynamic Navigation
+- [x] Dynamic Catalog

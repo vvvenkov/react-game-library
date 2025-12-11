@@ -8,9 +8,9 @@ export default function Home() {
                 <img id="logo-left" src="./images/logo.png" alt="logo" />
             </div>
 
+            <h1>Latest Games</h1>
             <div id="home-page" />
             <div id="latest-wrap">
-            <h1>Latest Games</h1>
                 {/* <!-- Display div: with information about every game (if any) --> */}
                 <div className="home-container">
                     <div className="game">
