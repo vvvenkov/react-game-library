@@ -1,4 +1,17 @@
-export default async function request(url) {
+export default async function request(url, method, data) {
+    let options = {};
+
+    if (method) {
+        options.method = method;
+    }
+    if (data) {
+        options.headers = {
+            'content-type': "application/json"
+        };
+
+        options.body = JSON.stringify(data);
+    }
+
     const response = await fetch(url);
 
     if (!response.ok) {

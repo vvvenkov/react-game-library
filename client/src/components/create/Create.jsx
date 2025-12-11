@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import request from "../../utils/request";
 
 export default function Create() {
     const navigate = useNavigate();
@@ -13,15 +14,16 @@ export default function Create() {
         data.players = Number(data.players);
         data._createdOn = Date.now();
 
-        const response = await fetch('http://localhost:3030/jsonstore/games', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        })
-        const result = await response.json();
-        console.log(result)
+        // const response = await fetch('http://localhost:3030/jsonstore/games', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify(data),
+        // })
+        // const result = await response.json();
+
+        const result = await request('http://localhost:3030/jsonstore/games', 'POST', data);
 
         navigate('/games');
     }
