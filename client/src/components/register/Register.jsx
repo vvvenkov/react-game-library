@@ -1,7 +1,27 @@
 export default function Register() {
+    const registerSubmit = (formData) => {
+        const email = formData.get('email');
+        const password = formData.get('password');
+        const confirmPassword = formData.get('confirm-password');
+
+
+        // TODO: Validation
+        if (!email || !password) {
+            return alert('Email and password are required.');
+        }
+
+        if (!password === confirmPassword) {
+            return alert('Password missmatch')
+        }
+
+        // TODO Registrer User
+
+        // TODO: Redirect to home page
+    }
+
     return (
         <section id="register-page" className="content auth">
-            <form id="register">
+            <form id="register" action="">
                 <div className="container">
                     <div className="brand-logo"></div>
                     <h1>Register</h1>
@@ -16,7 +36,7 @@ export default function Register() {
                     <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat Password" />
 
                     <input className="btn submit" type="submit" value="Register" />
-                    
+
                 </div>
             </form>
         </section>
