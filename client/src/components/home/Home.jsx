@@ -27,18 +27,18 @@ export default function Home() {
                 <img id="logo-left" src="./images/logo.png" alt="logo" />
             </div>
 
-            <div id="home-page" />
-            <h1>Latest Games</h1>
-            <div id="latest-wrap">
-                {/* <!-- Display div: with information about every game (if any) --> */}
-                <div className="home-container">
+            <div id="home-page">
+                <h1>Latest Games</h1>
+                <div id="latest-wrap">
+                    {/* <!-- Display div: with information about every game (if any) --> */}
+                    <div className="home-container">
 
-                    {/* short hand condictional rendering */}
-                    {latestGames.length === 0 && <p className="no-articles">No games yet...</p>}
+                        {/* short hand condictional rendering */}
+                        {latestGames.length === 0 && <p className="no-articles">No games yet...</p>}
 
-                    {latestGames.map(game => <Game key={game._id} {...game} />)}
+                        {latestGames.map(game => <Game key={game._id} {...game} />)}
+                    </div>
                 </div>
-
             </div>
         </section >
     );
