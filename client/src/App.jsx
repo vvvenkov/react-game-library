@@ -14,7 +14,7 @@ import Login from './components/login/Login'
 function App() {
 	const [user, setUser] = useState(null);
 
-	const registerHandler = (email) => {
+	const authHandler = (email) => {
 		setUser({
 			email,
 		});
@@ -29,8 +29,8 @@ function App() {
 				<Route path="/games" element={<Catalog />} />
 				<Route path="/games/create" element={<Create />} />
 				<Route path="/games/:gameId/details" element={<Details />} />
-				<Route path="/users/register" element={<Register user={user} onRegister={registerHandler} />} />
-				<Route path="/users/login" element={<Login />} />
+				<Route path="/users/register" element={<Register onRegister={authHandler} />} />
+				<Route path="/users/login" element={<Login onLogin={authHandler} />} />
 			</Routes >
 
 			<Footer />
