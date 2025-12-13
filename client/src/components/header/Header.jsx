@@ -1,8 +1,12 @@
 import { Link } from "react-router"
 
-export default function Header() {
+export default function Header({
+    user,
+}) {
+    console.log(user)
     return (
         <header>
+
             {/* <!-- Navigation --> */}
             <nav>
                 <Link className="home" to="/"> <img src="./images/logo.png" alt="logo" /> </Link>
