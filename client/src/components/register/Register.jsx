@@ -21,11 +21,16 @@ export default function Register({
             return alert('Password missmatch')
         }
 
-        // Registrer User
-        onRegister(email);
+        try {
+            // Registrer User
+            onRegister(email, password);
+
+            navigate('/');
+        } catch (err) {
+            alert(err.message);
+        }
 
         // Redirect to home page
-        navigate('/');
     }
 
     return (
