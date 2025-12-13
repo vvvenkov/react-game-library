@@ -19,10 +19,13 @@ function App() {
 		if (registeredUsers.some(user => user.email === email)) {
 			throw new Error('Username is taken! ')
 		}
+		const newUser = { email, password };
 
-		setRegisteredUsers(state => [...state, { email, password }])
 
-		//TODO: login user after register
+		setRegisteredUsers(state => [...state, newUser])
+
+		// Login user after register
+		setUser(newUser)
 	};
 
 	const loginHandler = (email, password) => {
