@@ -10,6 +10,7 @@ import Create from './components/create/Create'
 import Register from './components/register/Register'
 import Login from './components/login/Login'
 import Logout from './components/logout/Logout';
+import Edit from './components/edit/Edit';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
 				<Route path="/" element={<Home />} />
 				<Route path="/games" element={<Catalog />} />
 				<Route path="/games/create" element={<Create />} />
+				<Route path="/games/:gameId/edit" element={<Edit />} />
 				<Route path="/games/:gameId/details" element={<Details />} />
 				<Route path="/register" element={<Register onRegister={registerHandler} />} />
 				<Route path="/login" element={<Login onLogin={loginHandler} />} />
