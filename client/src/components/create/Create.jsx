@@ -23,7 +23,7 @@ export default function Create() {
         // })
         // const result = await response.json();
 
-        const result = await request('http://localhost:3030/jsonstore/games', 'POST', data);
+        await request('http://localhost:3030/jsonstore/games', 'POST', data);
 
         navigate('/games');
     }
