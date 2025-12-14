@@ -9,6 +9,7 @@ import Header from './components/header/Header'
 import Create from './components/create/Create'
 import Register from './components/register/Register'
 import Login from './components/login/Login'
+import Logout from './components/logout/Logout';
 
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
 		setUser(user);
 	}
 
+	const logoutHandler = () => {
+		setUser(null);
+	}
+
 	return (
 		<>
 			<Header user={user} />
@@ -46,8 +51,9 @@ function App() {
 				<Route path="/games" element={<Catalog />} />
 				<Route path="/games/create" element={<Create />} />
 				<Route path="/games/:gameId/details" element={<Details />} />
-				<Route path="/users/register" element={<Register onRegister={registerHandler} />} />
-				<Route path="/users/login" element={<Login onLogin={loginHandler} />} />
+				<Route path="/register" element={<Register onRegister={registerHandler} />} />
+				<Route path="/login" element={<Login onLogin={loginHandler} />} />
+				<Route path="/logout" element={<Logout onLogout={logoutHandler} />} />
 			</Routes >
 
 			<Footer />

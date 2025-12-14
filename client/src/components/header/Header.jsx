@@ -13,12 +13,12 @@ export default function Header({
                 {/* <!-- Logged-in users --> */}
                 <div id="user">
                     <Link to="/games/create">Add Game</Link>
-                    <Link to="/users/logout">Logout</Link>
+                    <Link to="/logout">Logout</Link>
                 </div>
                 {/* <!-- Guest users --> */}
                 <div id="guest">
-                    <Link to="/users/login">Login</Link>
-                    <Link to="/users/register">Register</Link>
+                    <Link to="/login">Login</Link>
+                    <Link to="/register">Register</Link>
                 </div>
                 {user && <p>{user.email}</p>}
 
