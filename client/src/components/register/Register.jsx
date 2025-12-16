@@ -7,7 +7,7 @@ export default function Register({
 
     const navigate = useNavigate();
 
-    const registerHandler = (values) => {
+    const registerHandler = async (values) => {
         const { email, password, confirmPassword } = values;
 
         // Validation
@@ -21,7 +21,7 @@ export default function Register({
 
         try {
             // Registrer User
-            onRegister(email, password);
+            await onRegister(email, password);
 
             navigate('/');
         } catch (err) {
@@ -48,18 +48,17 @@ export default function Register({
                     <h1>Register</h1>
 
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" {...register('email')} placeHolder="Your Email" />
+                    <input type="email" id="email" {...register('email')} placeholder="Your Email" />
 
                     <label htmlFor="pass">Password:</label>
-                    <input type="password" {...register('password')} placeholder="Password" />
+                    <input type="password" id="register-password" {...register('password')} placeholder="Password" />
 
                     <label htmlFor="con-pass">Confirm Password:</label>
-                    <input type="password" {...register('confirmPassword')} placeholder="Repeat Password" />
+                    <input type="password" id="confirm-password" {...register('confirmPassword')} placeholder="Repeat Password" />
 
                     <input className="btn submit" type="submit" value="Register" />
-
                 </div>
             </form>
-        </section >
-    )
+        </section>
+    );
 }

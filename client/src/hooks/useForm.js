@@ -10,20 +10,22 @@ export default function useForm(callback, initialValues) {
         }))
     };
 
-    const formAction = async (formData) => {
-        await callback(values, formData);
+    const formAction = (formData) => {
+        callback(values, formData);
     }
 
     const register = (fieldName) => {
         return {
             name: fieldName,
-            onchange: changeHandler,
+            onChange: changeHandler,
             value: values[fieldName],
         }
     }
 
     return {
         values,
+        setValues,
+        register,
         changeHandler,
         formAction,
     }

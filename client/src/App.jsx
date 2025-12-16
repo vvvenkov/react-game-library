@@ -14,24 +14,27 @@ import Edit from './components/edit/Edit';
 
 
 function App() {
-	const [registeredUsers, setRegisteredUsers] = useState([]);
 	const [user, setUser] = useState(null);
+	const registerHandler = async (email, password) => {
 
-	const registerHandler = (email, password) => {
-		if (registeredUsers.some(user => user.email === email)) {
-			throw new Error('Username is taken! ')
-		}
 		const newUser = { email, password };
 
+		// register api call
+		const response = await fetch('http://localhost:3030/users/register', {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json',
+			},
+			body: JSON.stringify(newUser),
+		});
 
-		setRegisteredUsers(state => [...state, newUser])
+		const result = await response.json();
 
 		// Login user after register
-		setUser(newUser)
+		setUser(result)
 	};
 
 	const loginHandler = (email, password) => {
-		const user = registeredUsers.find(u => u.email === email && u.password === password);
 		if (!user) {
 			throw new Error('Invalid username or password!')
 		}
