@@ -1,40 +1,39 @@
 import { useNavigate } from "react-router";
 import useForm from "../../hooks/useForm";
+import { useContext } from "react";
+import UserContext from "../../contexts/UserContext";
 
-export default function Register({
-    onRegister,
-}) {
-
+export default function Register() {
     const navigate = useNavigate();
+    const { registerHandler } = useContext(UserContext)
 
-    const registerHandler = async (values) => {
+    const registerSubmitHandler = async (values) => {
         const { email, password, confirmPassword } = values;
 
         // Validation
         if (!email || !password) {
-            return alert('Email and password are required.');
+            return alert('Email and password are required!');
         }
 
         if (password !== confirmPassword) {
-            return alert('Password missmatch')
+            return alert('Password missmatch!');
         }
 
         try {
-            // Registrer User
-            await onRegister(email, password);
+            // Register User
+            await registerHandler(email, password);
 
+            // redirect to home page
             navigate('/');
         } catch (err) {
             alert(err.message);
         }
-
-        // Redirect to home page
     }
 
     const {
         register,
         formAction,
-    } = useForm(registerHandler, {
+    } = useForm(registerSubmitHandler, {
         email: '',
         password: '',
         confirmPassword: '',
