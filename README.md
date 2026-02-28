@@ -13,7 +13,6 @@ REST API communication via fetch
 Global state management using React Context
 
 react-game-library/
-│
 ├── client/                # Frontend (React + Vite)
 │   ├── src/
 │   │   ├── components/
@@ -22,7 +21,6 @@ react-game-library/
 │   │   ├── utils/
 │   │   └── App.jsx
 │   └── package.json
-│
 ├── server/                # Backend (JSON Server)
 │   ├── data/
 │   └── server.js
