@@ -1,22 +1,37 @@
-## I Love Game Workshop | SoftUni React Sept 2025
+A full-stack React application for managing a game catalog.
+Users can register, log in, browse games, view details, and create/edit their own entries.
 
-## Initial Setup
-- [x] Create root level client and server folders
-- [x] Copy softuni-practice-server into server directory
-- [x] Create react base project inside client folder `npm create vite .`
-- [x] Add resources
-- [x] Add react-router `npm i react-router`
-- [x] Copy html template index.html to App.jsx (convert to jsx)
-- [x] Setup react router
-- [x] Extract home page components
-- [x] Add BrowserRouter Component
-- [x] Add routes
-- [x] Dynamic Navigation
-- [x] Dynamic Catalog
-- [x] Dynamic Home latest games
-- [x] Add details page
-- [x] Delete Game
+Built with React + Vite (client) and JSON Server (backend API).
 
-## Bonus
-- [x] Add Game
-- [x] Requester
+User authentication (Register / Login / Logout)
+Game catalog listing
+Game details page
+Create new games (authenticated users)
+Edit games (owners only)
+Client-side routing with React Router
+REST API communication via fetch
+Global state management using React Context
+
+react-game-library/
+│
+├── client/                # Frontend (React + Vite)
+│   ├── src/
+│   │   ├── components/
+│   │   ├── contexts/
+│   │   ├── hooks/
+│   │   ├── utils/
+│   │   └── App.jsx
+│   └── package.json
+│
+├── server/                # Backend (JSON Server)
+│   ├── data/
+│   └── server.js
+│
+└── README.md
+
+
+How to start:
+1. CLone the repo
+2. Install dependencies - npm install
+3. npm start
+4. server will run on http://localhost:3030
