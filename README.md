@@ -12,21 +12,6 @@ Client-side routing with React Router
 REST API communication via fetch
 Global state management using React Context
 
-react-game-library/
-├── client/                # Frontend (React + Vite)
-│   ├── src/
-│   │   ├── components/
-│   │   ├── contexts/
-│   │   ├── hooks/
-│   │   ├── utils/
-│   │   └── App.jsx
-│   └── package.json
-├── server/                # Backend (JSON Server)
-│   ├── data/
-│   └── server.js
-│
-└── README.md
-
 
 How to start:
 1. CLone the repo
